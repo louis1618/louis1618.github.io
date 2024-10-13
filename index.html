@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="kr" style="overflow-y: auto;">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+  <title>Louis1618 | 이예찬</title>
+  <meta name="description" content="Louis1618 Portfolio">
+
+  <link rel="icon" href="favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="./src/css/main-miorey.min.css">
+  <link rel="stylesheet" href="./src/css/vendors.min.css">
+
+  <!-- Scripts deferred to improve page load -->
+  <script defer src="./src/js/vendors.min.js"></script>
+  <script defer src="./src/js/app.min.js"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B82PF83EDC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-B82PF83EDC');
+  </script>
+</head>
+
+<body data-aos-easing="ease-in-sine" data-aos-duration="600" data-aos-delay="100">
+
+<div id="landing">
+  <div id="landing2">
+    <div class="landing-title">
+      <h1>
+        <span id="txt-rotate" data-period="2000" data-rotate="[&quot;Louis1618&quot;, &quot;이예찬&quot;, &quot;CARAT&quot;]">
+          <span class="wrap">Louis1618</span>
+        </span>
+      </h1>
+      <div class="landing-icons">
+
+        <!-- 포트폴리오 아이콘 -->
+        <a class="social-link github" aria-label="My Github" href="https://github.com/louis1618" target="_blank" rel="noreferrer">
+          <svg class="circle" viewBox="0 0 200 200"><circle cx="100" cy="100" r="80"></circle></svg>
+          <div class="social">
+            <svg class="social-svg" viewBox="0 0 48 48">
+              <use x="12" y="12" width="24" height="24" xlink:href="./assets/img/brands.svg#github"></use>
+            </svg>
+          </div>
+          <span class="label">Github</span>
+        </a>
+
+        <a class="social-link discord" aria-label="My Discord" href="https://discord.com/users/760335260734455840" target="_blank" rel="noreferrer">
+          <svg class="circle" viewBox="0 0 200 200"><circle cx="100" cy="100" r="80"></circle></svg>
+          <div class="social">
+            <svg class="social-svg" viewBox="0 0 48 48">
+              <use x="12" y="12" width="24" height="24" xlink:href="./assets/img/brands.svg#discord"></use>
+            </svg>
+          </div>
+          <span class="label">Discord</span>
+        </a>
+
+        <a class="social-link carat" aria-label="CARAT" href="https://louis1618.github.io/svt" target="_blank" rel="noreferrer">
+          <svg class="circle" viewBox="0 0 200 200"><circle cx="100" cy="100" r="80"></circle></svg>
+          <div class="social">
+            <svg class="social-svg" viewBox="0 0 48 48">
+              <defs>
+                <linearGradient id="hover-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color:#92A8D1;stop-opacity:1"></stop>
+                  <stop offset="100%" style="stop-color:#F7CAC9;stop-opacity:1"></stop>
+                </linearGradient>
+              </defs>
+              <use x="12" y="12" width="24" height="24" xlink:href="./assets/img/solid.svg#gem"></use>
+            </svg>
+          </div>
+          <span class="label">SEVENTEEN</span>
+        </a>
+
+        <a class="social-link instagram" aria-label="My discord" target="_blank" rel="noreferrer" href="https://www.instagram.com/ye.cha1n0">
+          <svg viewBox="0 0 200 200" class="circle">
+            <circle cx="100" cy="100" r="80"></circle>
+          </svg>
+          <div class="social">
+            <svg class="social-svg" viewBox="0 0 48 48">
+              <use x="12" y="12" width="24" height="24" viewBox="0 0 48 48" xlink:href="./assets/img/brands.svg#instagram"></use>
+            </svg>
+          </div>
+          <span class="label">Instagram</span>
+        
+        </a>
+
+        <a class="social-link toss" aria-label="My Toss" onclick="copyToClipboard('1908-5205-5663')" target="_blank" rel="noreferrer">
+          <svg class="circle" viewBox="0 0 200 200"><circle cx="100" cy="100" r="80"></circle></svg>
+          <div class="social">
+            <svg class="social-svg" viewBox="0 0 48 48">
+              <use x="12" y="12" width="24" height="24" xlink:href="./assets/img/solid.svg#money-check"></use>
+            </svg>
+          </div>
+          <span class="label">Toss</span>
+        </a>
+
+        <div id="toast"></div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function copyToClipboard(text) {
+    const textarea = document.createElement('textarea');
+    textarea.textContent = text;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+    
+    showToast('복사되었습니다.', () => {
+      showToast('토스뱅크 가상계좌 1908-5205-5663');
+    });
+  }
+
+  let isToastShowing = false;
+  
+  function showToast(message, callback) {
+    if (isToastShowing) return;
+    const toast = document.getElementById('toast');
+    toast.className = 'show';
+    toast.innerText = message;
+    isToastShowing = true;
+    
+    setTimeout(() => {
+      toast.className = toast.className.replace('show', '');
+      isToastShowing = false;
+      if (callback) setTimeout(callback, 500);
+    }, 2000);
+  }
+</script>
+
+<footer class="footer">
+  <p>© 2024 Louis1618, All rights reserved</p>
+  <p>Built with Jekyll and powered by Github Pages</p>
+</footer>
+
+<style type="text/css">#txt-rotate > .wrap { border-right: 0.08em solid #666 }</style>
+</body>
+</html>
