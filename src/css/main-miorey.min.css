@@ -18,7 +18,18 @@ body {
     background-position: center; 
     background-repeat: no-repeat;
     background-attachment: fixed;
-  }
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);  /* 검은색 반투명 오버레이 */
+    z-index: -1;
+}
   
 h1 {
     font-size: 2rem;
@@ -55,14 +66,20 @@ a:hover {
 
 .footer {
     background: transparent;
-    color: #fff;
-    margin: .1rem;
-    padding: 1rem;
+    color: #ffffff;
     text-align: center
 }
 
+.footer .footer-container {
+    background-color: #3533331e;
+    padding:8px;
+    max-width: 100%;
+}
+
 .footer p {
-    margin: 0.2rem 0; 
+    margin: 0.2rem 0;
+    font-weight: bold;
+    color:#ffffff
 }
 
 #landing {
@@ -92,12 +109,12 @@ a:hover {
 }
 
 .landing-icons .social-link {
-    color: #fff;
+    color: #ffffff;
     position: relative;
     height: 3rem;
     line-height: 3rem;
     margin: .25rem;
-    width: 3rem
+    width: 3rem;
 }
 
 .landing-icons .social-link .circle {
@@ -122,7 +139,7 @@ a:hover {
 .landing-icons .social-link .label {
     display: none;
     white-space: nowrap;
-    position: absolute
+    position: absolute;
 }
 
 .landing-icons .social-link:hover {
@@ -169,6 +186,7 @@ a:hover {
     background: rgba(0, 0, 0, .35);
     color: #fff;
     z-index: 10000;
+    font-weight: bold;
 }
 
 #toast.show {
