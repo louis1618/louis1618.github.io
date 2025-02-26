@@ -22,11 +22,64 @@
     gtag('js', new Date());
     gtag('config', 'G-B82PF83EDC');
   </script>
+    <style>
+      #landing {
+        display: none;
+        opacity: 0;
+        transition: opacity 1s ease;
+      }
+
+      #landing.show {
+        display: block;
+        opacity: 1;
+      }
+
+      .prs-message {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #121317;
+        z-index: 9999;
+      }
+      .prs-message svg {
+        width: 3.25em;
+        transform-origin: center;
+        animation: rotate4 2s linear infinite;
+      }
+      .prs-message circle {
+        fill: none;
+        stroke: hsl(214, 97%, 59%);
+        stroke-width: 4;
+        stroke-dasharray: 1, 200;
+        stroke-dashoffset: 0;
+        stroke-linecap: round;
+        animation: dash4 1.5s ease-in-out infinite;
+      }
+      @keyframes rotate4 {
+        100% { transform: rotate(360deg); }
+      }
+      @keyframes dash4 {
+        0% { stroke-dasharray: 1, 200; stroke-dashoffset: 0; }
+        50% { stroke-dasharray: 90, 200; stroke-dashoffset: -35px; }
+        100% { stroke-dashoffset: -125px; }
+      }
+    </style>
 </head>
 
 <body data-aos-easing="ease-in-sine" data-aos-duration="600" data-aos-delay="100">
 
-<div id="landing">
+<div class="prs-message" id="loading">
+  <svg class="loader" viewBox="25 25 50 50">
+    <circle r="20" cy="50" cx="50"></circle>
+  </svg>
+</div>
+
+<div id="landing" style="display: none;">
   <div id="landing2">
     <div class="landing-title">
       <h1>
@@ -132,6 +185,17 @@
       if (callback) setTimeout(callback, 500);
     }, 2000);
   }
+</script>
+
+<script>
+  window.addEventListener("load", function() {
+    document.getElementById("loading").style.display = "none";
+    const landing = document.getElementById("landing");
+    landing.style.display = "block";
+    setTimeout(() => {
+      landing.classList.add("show"); // 애니메이션 시작
+    }, 10); // display가 block으로 설정된 후에 애니메이션 적용
+  });
 </script>
 
 <footer class="footer">
