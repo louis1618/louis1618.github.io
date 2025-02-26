@@ -23,17 +23,6 @@
     gtag('config', 'G-B82PF83EDC');
   </script>
     <style>
-      #landing {
-        display: none;
-        opacity: 0;
-        transition: opacity 1s ease;
-      }
-
-      #landing.show {
-        display: block;
-        opacity: 1;
-      }
-
       .prs-message {
         display: flex;
         justify-content: center;
@@ -68,6 +57,19 @@
         50% { stroke-dasharray: 90, 200; stroke-dashoffset: -35px; }
         100% { stroke-dashoffset: -125px; }
       }
+
+      .fade-in {
+        animation: fadeIn 1s ease forwards;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
     </style>
 </head>
 
@@ -79,7 +81,7 @@
   </svg>
 </div>
 
-<div id="landing" style="display: none;">
+<div id="landing">
   <div id="landing2">
     <div class="landing-title">
       <h1>
@@ -191,12 +193,11 @@
   window.addEventListener("load", function() {
     document.getElementById("loading").style.display = "none";
     const landing = document.getElementById("landing");
-    landing.style.display = "block";
-    setTimeout(() => {
-      landing.classList.add("show"); // 애니메이션 시작
-    }, 10); // display가 block으로 설정된 후에 애니메이션 적용
+    landing.style.display = "flex";
+    landing.classList.add("fade-in");  // fade-in 클래스 추가
   });
 </script>
+
 
 <footer class="footer">
   <div class="footer-container">
