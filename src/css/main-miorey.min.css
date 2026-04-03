@@ -1,21 +1,25 @@
 @charset "UTF-8";
 @import url("../../assets/fonts/ArchivoBlack-Regular.ttf");
 @import url("https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap");
+
 html {
     background: transparent;
     color: #fff;
-    font-family: Raleway,sans-serif;
+    font-family: Raleway, sans-serif;
     font-size: 1rem;
     font-weight: 400;
     overflow: hidden
 }
-body,html {
+
+body,
+html {
     height: 100%
 }
+
 body {
-    background-image: url('../../assets/img/fans/seventeen-spillthefeel12.jpeg');
+    background-image: url('../../assets/img/fans/cyberpunk.jpg');
     background-size: cover;
-    background-position: center; 
+    background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
@@ -27,27 +31,34 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);  /* 검은색 반투명 오버레이 */
+    background-color: rgba(0, 0, 0, 0.3);
+    /* 검은색 반투명 오버레이 */
     z-index: -1;
 }
-  
+
 h1 {
     font-size: 2rem;
     font-weight: 600;
     line-height: 2rem
 }
+
 p {
     word-spacing: .1rem
 }
+
 a {
     color: #ff073a;
     text-decoration: none
 }
+
 a:hover {
     color: #fff
 }
+
 @keyframes a {
-    0%,to {
+
+    0%,
+    to {
         transform: translate(0)
     }
 
@@ -56,7 +67,7 @@ a:hover {
     }
 
     50% {
-        transform: translate(160%,160%)
+        transform: translate(160%, 160%)
     }
 
     75% {
@@ -72,14 +83,14 @@ a:hover {
 
 .footer .footer-container {
     background-color: #3533331e;
-    padding:8px;
+    padding: 8px;
     max-width: 100%;
 }
 
 .footer p {
     margin: 0.2rem 0;
     font-weight: bold;
-    color:#ffffff
+    color: #ffffff
 }
 
 #landing {
@@ -89,7 +100,8 @@ a:hover {
     text-align: center
 }
 
-#landing,.landing-title {
+#landing,
+.landing-title {
     margin: .5rem;
     padding: .5rem
 }
@@ -147,7 +159,7 @@ a:hover {
 }
 
 .landing-icons .social-link:hover .circle {
-    animation: b 1s ease-in-out forwards,d 1s linear forwards;
+    animation: b 1s ease-in-out forwards, d 1s linear forwards;
     fill: #fff;
     fill-opacity: 1
 }
@@ -157,14 +169,14 @@ a:hover {
 }
 
 .landing-icons .social-link:hover .label {
-    display: unset!important;
+    display: unset !important;
     bottom: -2.5rem;
     left: 50%;
     transform: translate(-50%)
 }
 
 .landing-icons .carat:hover .circle {
-    animation: b 1s ease-in-out forwards,g 1s linear forwards
+    animation: b 1s ease-in-out forwards, g 1s linear forwards
 }
 
 .landing-icons .carat:hover .social-svg {

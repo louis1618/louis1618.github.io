@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="kr" style="overflow-y: auto;">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,190 +26,227 @@
   </script>
   <meta name="naver-site-verification" content="76fa9816c000e3e38377bf3ed4525bc9a9e2a43c" />
 
-    <style>
-      .prs-message {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: #121317;
-        z-index: 9999;
+  <style>
+    .prs-message {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #121317;
+      z-index: 9999;
+    }
+
+    .prs-message svg {
+      width: 3.25em;
+      transform-origin: center;
+      animation: rotate4 2s linear infinite;
+    }
+
+    .prs-message circle {
+      fill: none;
+      stroke: hsl(214, 97%, 59%);
+      stroke-width: 4;
+      stroke-dasharray: 1, 200;
+      stroke-dashoffset: 0;
+      stroke-linecap: round;
+      animation: dash4 1.5s ease-in-out infinite;
+    }
+
+    @keyframes rotate4 {
+      100% {
+        transform: rotate(360deg);
       }
-      .prs-message svg {
-        width: 3.25em;
-        transform-origin: center;
-        animation: rotate4 2s linear infinite;
-      }
-      .prs-message circle {
-        fill: none;
-        stroke: hsl(214, 97%, 59%);
-        stroke-width: 4;
+    }
+
+    @keyframes dash4 {
+      0% {
         stroke-dasharray: 1, 200;
         stroke-dashoffset: 0;
-        stroke-linecap: round;
-        animation: dash4 1.5s ease-in-out infinite;
-      }
-      @keyframes rotate4 {
-        100% { transform: rotate(360deg); }
-      }
-      @keyframes dash4 {
-        0% { stroke-dasharray: 1, 200; stroke-dashoffset: 0; }
-        50% { stroke-dasharray: 90, 200; stroke-dashoffset: -35px; }
-        100% { stroke-dashoffset: -125px; }
       }
 
-      .fade-in {
-        animation: fadeIn 1s ease forwards;
+      50% {
+        stroke-dasharray: 90, 200;
+        stroke-dashoffset: -35px;
       }
 
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
+      100% {
+        stroke-dashoffset: -125px;
       }
-    </style>
+    }
+
+    .fade-in {
+      animation: fadeIn 1s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
 </head>
 
 <body data-aos-easing="ease-in-sine" data-aos-duration="600" data-aos-delay="100">
 
-<div class="prs-message" id="loading">
-  <svg class="loader" viewBox="25 25 50 50">
-    <circle r="20" cy="50" cx="50"></circle>
-  </svg>
-</div>
+  <div class="prs-message" id="loading">
+    <svg class="loader" viewBox="25 25 50 50">
+      <circle r="20" cy="50" cx="50"></circle>
+    </svg>
+  </div>
 
-<div id="landing">
-  <div id="landing2">
-    <div class="landing-title">
-      <h1>
-        <span id="txt-rotate" data-period="2000" data-rotate="[&quot;Louis1618&quot;, &quot;이예찬&quot;, &quot;CARAT&quot;]">
-          <span class="wrap">Louis1618</span>
-        </span>
-      </h1>
-      <div class="landing-icons">
+  <div id="landing">
+    <div id="landing2">
+      <div class="landing-title">
+        <h1>
+          <span id="txt-rotate" data-period="2000"
+            data-rotate="[&quot;Louis1618&quot;, &quot;이예찬&quot;, &quot;Programmer & Luverse Founder&quot;]">
+            <span class="wrap">Louis1618</span>
+          </span>
+        </h1>
+        <div class="landing-icons">
 
-        <!-- 포트폴리오 아이콘 -->
-        <a class="social-link github" aria-label="My Github" href="https://github.com/louis1618" target="_blank" rel="noreferrer">
-          <svg class="circle" viewBox="0 0 200 200"><circle cx="100" cy="100" r="80"></circle></svg>
-          <div class="social">
-            <svg class="social-svg" viewBox="0 0 48 48">
-              <use x="12" y="12" width="24" height="24" xlink:href="./assets/img/brands.svg#github"></use>
+          <!-- 포트폴리오 아이콘 -->
+          <a class="social-link github" aria-label="My Github" href="https://github.com/louis1618" target="_blank"
+            rel="noreferrer">
+            <svg class="circle" viewBox="0 0 200 200">
+              <circle cx="100" cy="100" r="80"></circle>
             </svg>
-          </div>
-          <span class="label"><strong>Github</strong></span>
-        </a>
+            <div class="social">
+              <svg class="social-svg" viewBox="0 0 48 48">
+                <use x="12" y="12" width="24" height="24" xlink:href="./assets/img/brands.svg#github"></use>
+              </svg>
+            </div>
+            <span class="label"><strong>Github</strong></span>
+          </a>
 
-        <a class="social-link discord" aria-label="My Discord" href="https://discord.com/users/760335260734455840" target="_blank" rel="noreferrer">
-          <svg class="circle" viewBox="0 0 200 200"><circle cx="100" cy="100" r="80"></circle></svg>
-          <div class="social">
-            <svg class="social-svg" viewBox="0 0 48 48">
-              <use x="12" y="12" width="24" height="24" xlink:href="./assets/img/brands.svg#discord"></use>
+          <a class="social-link discord" aria-label="My Discord" href="https://discord.com/users/760335260734455840"
+            target="_blank" rel="noreferrer">
+            <svg class="circle" viewBox="0 0 200 200">
+              <circle cx="100" cy="100" r="80"></circle>
             </svg>
-          </div>
-          <span class="label"><strong>Discord</strong></span>
-        </a>
+            <div class="social">
+              <svg class="social-svg" viewBox="0 0 48 48">
+                <use x="12" y="12" width="24" height="24" xlink:href="./assets/img/brands.svg#discord"></use>
+              </svg>
+            </div>
+            <span class="label"><strong>Discord</strong></span>
+          </a>
 
-        <a class="social-link carat" aria-label="CARAT" href="https://louis1618.shop" target="_blank" rel="noreferrer">
-          <svg class="circle" viewBox="0 0 200 200"><circle cx="100" cy="100" r="80"></circle></svg>
-          <div class="social">
-            <svg class="social-svg" viewBox="0 0 48 48">
-              <defs>
-                <linearGradient id="hover-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" style="stop-color:#92A8D1;stop-opacity:1"></stop>
-                  <stop offset="100%" style="stop-color:#F7CAC9;stop-opacity:1"></stop>
-                </linearGradient>
-              </defs>
-              <use x="12" y="12" width="24" height="24" xlink:href="./assets/img/solid.svg#gem"></use>
+          <a class="social-link carat" aria-label="CARAT" href="https://luverse.moring.co" target="_blank"
+            rel="noreferrer">
+            <svg class="circle" viewBox="0 0 200 200">
+              <circle cx="100" cy="100" r="80"></circle>
             </svg>
-          </div>
-          <span class="label"><strong>Blog</strong></span>
-        </a>
+            <div class="social">
+              <svg class="social-svg" viewBox="0 0 48 48">
+                <defs>
+                  <linearGradient id="hover-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#92A8D1;stop-opacity:1"></stop>
+                    <stop offset="100%" style="stop-color:#F7CAC9;stop-opacity:1"></stop>
+                  </linearGradient>
+                </defs>
+                <use x="12" y="12" width="24" height="24" xlink:href="./assets/img/solid.svg#gem"></use>
+              </svg>
+            </div>
+            <span class="label"><strong>Luverse Blog</strong></span>
+          </a>
 
-        <a class="social-link instagram" aria-label="My discord" target="_blank" rel="noreferrer" href="https://www.instagram.com/ye.cha1n0">
-          <svg viewBox="0 0 200 200" class="circle">
-            <circle cx="100" cy="100" r="80"></circle>
-          </svg>
-          <div class="social">
-            <svg class="social-svg" viewBox="0 0 48 48">
-              <use x="12" y="12" width="24" height="24" viewBox="0 0 48 48" xlink:href="./assets/img/brands.svg#instagram"></use>
+          <a class="social-link instagram" aria-label="My discord" target="_blank" rel="noreferrer"
+            href="https://www.instagram.com/luverse.o">
+            <svg viewBox="0 0 200 200" class="circle">
+              <circle cx="100" cy="100" r="80"></circle>
             </svg>
-          </div>
-          <span class="label"><strong>Instagram</strong></span>
-        
-        </a>
+            <div class="social">
+              <svg class="social-svg" viewBox="0 0 48 48">
+                <use x="12" y="12" width="24" height="24" viewBox="0 0 48 48"
+                  xlink:href="./assets/img/brands.svg#instagram"></use>
+              </svg>
+            </div>
+            <span class="label"><strong>Instagram</strong></span>
 
-        <a class="social-link toss" aria-label="My Toss" onclick="copyToClipboard('1001-4806-6396')" target="_blank" rel="noreferrer">
-          <svg class="circle" viewBox="0 0 200 200"><circle cx="100" cy="100" r="80"></circle></svg>
-          <div class="social">
-            <svg class="social-svg" viewBox="0 0 48 48">
-              <use x="12" y="12" width="24" height="24" xlink:href="./assets/img/brands.svg#toss"></use>
+          </a>
+
+          <a class="social-link toss" aria-label="My Toss" onclick="copyToClipboard('')" target="_blank"
+            rel="noreferrer">
+            <svg class="circle" viewBox="0 0 200 200">
+              <circle cx="100" cy="100" r="80"></circle>
             </svg>
-          </div>
-          <span class="label"><strong>Toss</strong></span>
-        </a>
+            <div class="social">
+              <svg class="social-svg" viewBox="0 0 48 48">
+                <use x="12" y="12" width="24" height="24" xlink:href="./assets/img/brands.svg#toss"></use>
+              </svg>
+            </div>
+            <span class="label"><strong>Toss</strong></span>
+          </a>
 
-        <div id="toast"></div>
+          <div id="toast"></div>
 
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<script>
-  function copyToClipboard(text) {
-    const textarea = document.createElement('textarea');
-    textarea.textContent = text;
-    document.body.appendChild(textarea);
-    textarea.select();
-    document.execCommand('copy');
-    document.body.removeChild(textarea);
-    
-    showToast('복사되었습니다.', () => {
-      showToast('토스뱅크 1001-4806-6396');
+  <script>
+    function copyToClipboard(text) {
+      const textarea = document.createElement('textarea');
+      textarea.textContent = text;
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textarea);
+
+      showToast('보안 문제로 인하여 계좌번호는 비공개로 유지됩니다.', () => {
+        showToast('moring.co/luverse');
+      });
+    }
+
+    let isToastShowing = false;
+
+    function showToast(message, callback) {
+      if (isToastShowing) return;
+      const toast = document.getElementById('toast');
+      toast.className = 'show';
+      toast.innerText = message;
+      isToastShowing = true;
+
+      setTimeout(() => {
+        toast.className = toast.className.replace('show', '');
+        isToastShowing = false;
+        if (callback) setTimeout(callback, 500);
+      }, 2000);
+    }
+  </script>
+
+  <script>
+    window.addEventListener("load", function () {
+      document.getElementById("loading").style.display = "none";
+      const landing = document.getElementById("landing");
+      landing.style.display = "flex";
+      landing.classList.add("fade-in");
     });
-  }
-
-  let isToastShowing = false;
-  
-  function showToast(message, callback) {
-    if (isToastShowing) return;
-    const toast = document.getElementById('toast');
-    toast.className = 'show';
-    toast.innerText = message;
-    isToastShowing = true;
-    
-    setTimeout(() => {
-      toast.className = toast.className.replace('show', '');
-      isToastShowing = false;
-      if (callback) setTimeout(callback, 500);
-    }, 2000);
-  }
-</script>
-
-<script>
-  window.addEventListener("load", function() {
-    document.getElementById("loading").style.display = "none";
-    const landing = document.getElementById("landing");
-    landing.style.display = "flex";
-    landing.classList.add("fade-in");
-  });
-</script>
+  </script>
 
 
-<footer class="footer">
-  <div class="footer-container">
-    <p>© 2025 Louis1618, All rights reserved</p>
-    <p>Built with Jekyll and powered by Github Pages</p>
-  </div>
-</footer>
+  <footer class="footer">
+    <div class="footer-container">
+      <p>© 2026 Louis1618, All rights reserved</p>
+      <p>Built with Jekyll and powered by Github Pages</p>
+    </div>
+  </footer>
 
-<style type="text/css">#txt-rotate > .wrap { border-right: 0.08em solid #666 }</style>
+  <style type="text/css">
+    #txt-rotate>.wrap {
+      border-right: 0.08em solid #666
+    }
+  </style>
 </body>
+
 </html>
